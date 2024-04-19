@@ -21,6 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('accountapp.urls')),  # 수정된 부분
+    path('account/', include('accountapp.urls')),
+    path('profiles/', include('profileapp.urls')),
 ]
 
