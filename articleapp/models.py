@@ -15,3 +15,6 @@ class Article(models.Model):
     content = models.TextField(null=True)
 
     created_at = models.DateField(auto_created=True, null=True)
+
+    class Meta:
+       ordering = ['created_at']  # created_at 필드의 내림차순으로 정렬
