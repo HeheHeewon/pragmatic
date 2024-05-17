@@ -8,5 +8,9 @@ class Project(models.Model):
     description = models.CharField(max_length=200, null=True)
 
     created_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.pk} : {self.title}'
+
     class Meta:
        ordering = ['-created_at']  # created_at 필드의 내림차순으로 정렬
